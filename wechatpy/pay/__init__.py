@@ -130,8 +130,8 @@ class WeChatPay(object):
         return_code = data['return_code']
         return_msg = data.get('return_msg')
         result_code = data.get('result_code')
-        errcode = data.get('err_code')
-        errmsg = data.get('err_code_des')
+        errcode = return_code #data.get('err_code')
+        errmsg = return_msg #data.get('err_code_des')
         if return_code != 'SUCCESS' or result_code != 'SUCCESS':
             # 返回状态码不为成功
             raise WeChatPayException(

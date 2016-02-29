@@ -56,7 +56,7 @@ class WeChatOrder(BaseWeChatPayAPI):
             'total_fee': total_fee,
             'spbill_create_ip': client_ip or get_external_ip(),
             'time_start': time_start.strftime('%Y%m%d%H%M%S'),
-            'time_expire': time_expire.strftime('%Y%m%d%H%M%S'),
+            #'time_expire': time_expire.strftime('%Y%m%d%H%M%S'),
             'goods_tag': goods_tag,
             'notify_url': notify_url,
             'trade_type': trade_type,
